@@ -18,7 +18,6 @@ void type_prompt()
 {
     struct passwd *pwd;
     char hostname[max_length];
-    int length;
     pwd = getpwuid(getuid());
     if(gethostname(hostname,max_length)==0)
 	cout << "[rshell]" << pwd->pw_name << "@" << hostname << "$ ";
@@ -98,7 +97,7 @@ void loop(void)
   }while (status);
 }
 
-int main(int argc, char **argv)
+int main()
 {
  
   loop();
