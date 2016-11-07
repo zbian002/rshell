@@ -82,7 +82,7 @@ void loop(void)
 {
   char **args;
   int status;
-  char *line = NULL;
+  char *line;
   string input;
 
   do {
