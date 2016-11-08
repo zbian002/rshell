@@ -1,12 +1,10 @@
-COMPILE=g++ 
+CFLAG  = -ansi -pedantic -Wall -Werror
+COMPILER = g++ 
 
-FLAGS=-W -Wall -Werror -ansi -pedantic 
+all:
+	mkdir -p bin
 
-all: rshell
-
-rshell: src/rshell.cpp
-	([ ! -d bin/ ] && mkdir bin) || [ -d bin/ ] 
-	$(COMPILE) $(FLAGS) src/rshell.cpp -o bin/rshell
-
-clean: 
-	rm -rf *.o
+	$(COMPILER) $(CFLAG) src/rshell.cpp -o bin/rshell
+rshell:
+	mkdir -p bin
+	$(COMPILER) $(CFLAG) src/main.cpp -o bin/rshell 
