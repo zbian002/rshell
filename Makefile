@@ -1,4 +1,4 @@
-CFLAG  = -ansi -pedantic -Wall -Werror
+CFLAG  = -ansi -pedantic -Wall 
 COMPILER = g++ 
 
 all:
